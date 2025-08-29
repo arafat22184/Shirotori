@@ -174,7 +174,7 @@ const Home = () => {
 
   function handleTimeout() {
     updateMessage(currentPlayer, "Time's up! -2 points.");
-    applyScoreForPlayer(currentPlayer, 2); // deduct 2 points
+    applyScoreForPlayer(currentPlayer, 2);
     setHistory((h) => [
       ...h,
       { word: "Pass", by: currentPlayer, points: -2, time: TOTAL_TIME },
