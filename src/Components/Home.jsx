@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { CgProfile } from "react-icons/cg";
-import { GiLaurelsTrophy } from "react-icons/gi";
 import { IoIosTimer } from "react-icons/io";
 import Swal from "sweetalert2";
 
@@ -121,7 +120,7 @@ const Home = () => {
       setLoadingValidation(false);
       return Array.isArray(data) && data.length > 0 && data[0].meanings;
     } catch (e) {
-      setLoadingValidation(false);
+      e && setLoadingValidation(false);
       return false;
     }
   }
